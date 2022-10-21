@@ -1,0 +1,17 @@
+body {
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+}
+.div {
+  text-align: center;
+  margin-top: 15%;
+  font-size: 200px;
+}
+
+.a {
+  text-align: center;
+  margin-top: 15%;
+  color: #ffffff;
+  margin-left: 50%;
+}
+
