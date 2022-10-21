@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inicio.css">
+    <title>EU</title>
+</head>
+
+<style>
+    .container {
+        display: none;
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .a{
+        font-size: 15px;
+    }
+
+</style>
+
+<body class="font">
+    <div>
+        <div class="animate-charcter2">
+
+            <div id="root"></div>
+            <button style="width: 110px;" class="button-87" role="button" id='btn-div'>SIM</button>
+            <button style="width: 110px;" class="button-87" role="button" type="button" id="ImageHosting" 
+            value="To Image Hosting" onclick="alert('ALA ALA... CLICOU NO NÃO, CE É BOBA?');">NÃO</button>
+
+            <h1 class="cor"></h1>
+            <!-- type define o uso do babel no script-->
+            <script type="text/babel">
+                var btn = document.getElementById('btn-div');
+                var container = document.querySelector('.container');
+                btn.addEventListener('click', function () {
+
+                    if (container.style.display === 'block') {
+                        container.style.display = 'none';
+                    } else {
+                        container.style.display = 'block';
+                    }
+                });
+
+                var btn = document.getElementById('btn-div1');
+                var container1 = document.querySelector('.container1');
+                btn.addEventListener('click', function () {
+
+                    if (container1.style.display === 'block') {
+                        container1.style.display = 'none';
+                    } else {
+                        container1.style.display = 'block';
+                    }
+                });
+                let i = -1;
+                let speed = 80;
+
+                const txt = {
+                    frase: 'Olá Nicole, Tudo bem? Fiz isso pensando em você com muito amor e carinho, espero que goste. Você está pronta?'
+                }
+                function typeWriter() {
+                    if (i < txt.frase.length) {
+                        document.getElementById("root").innerHTML += txt.frase.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+                const element = <h1 class="cor">{typeWriter()}</h1>;
+                ReactDOM.render(element, document.getElementById("root"));
+            </script>
+
+            <div class="container">
+                <p>SIGA AS INSTRUÇÕES ABAIXO</p>
+                <p>- Ler com calma e tempo.</p>
+                <p>- Você recebeu uma caixa e um envelope, estes serão abertos por último.</p>
+                <p>- Primeiramente você já pode clicar no botão abaixo, lá você receberá novas instruções.</p>
+                <p class="a">obs: sujeito a erros de gramática e concordância.</p>
+                
+                <a class="black" target="_blank" href="index1.html"><button class="button-87" role="button" id='btn-div1'>APROVEITE :)</button></a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
